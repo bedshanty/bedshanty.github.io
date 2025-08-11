@@ -1,4 +1,4 @@
-const bgContainer = document.getElementById("bg-container");
+const canvas = document.getElementById("canvas");
 const flickerContainer = document.getElementById("flicker-container");
 
 let lastTime = 0;
@@ -14,11 +14,10 @@ function animate(currentTime) {
   if (currentTime - lastTime >= interval) {
     lastTime = currentTime;
     flickerContainer.style.opacity = Math.random() * flickerIntensity;
-    console.log(flickerContainer.style.opacity);
-    bgContainer.style.left = `${-Math.random() * backgroundShakeIntensity}px`;
-    bgContainer.style.right = `${-Math.random() * backgroundShakeIntensity}px`;
-    bgContainer.style.top = `${-Math.random() * backgroundShakeIntensity}px`;
-    bgContainer.style.bottom = `${-Math.random() * backgroundShakeIntensity}px`;
+    canvas.style.left = `${-Math.random() * backgroundShakeIntensity}px`;
+    canvas.style.right = `${-Math.random() * backgroundShakeIntensity}px`;
+    canvas.style.top = `${-Math.random() * backgroundShakeIntensity}px`;
+    canvas.style.bottom = `${-Math.random() * backgroundShakeIntensity}px`;
   }
 
   requestAnimationFrame(animate);

@@ -2,8 +2,18 @@ html {
   overflow: hidden;
 }
 
+#canvas {
+  position: relative;
+}
+
 #bg-container {
   position: absolute;
+}
+
+#shelf-back-container {
+  position: absolute;
+  right: 0;
+  bottom: -980px;
 }
 
 #flicker-container {
