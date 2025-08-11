@@ -16,6 +16,18 @@ html {
   bottom: -980px;
 }
 
+#bartender-container {
+  position: absolute;
+  left: 50%;
+  bottom: -770px;
+  transform:translateX(-50%);
+}
+
+#bartender-container img {
+  width: 720px;
+  height: 405px;
+}
+
 #desk-front-container {
   position: absolute;
   left: 0;
