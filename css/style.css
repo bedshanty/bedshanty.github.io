@@ -22,6 +22,12 @@ html {
   bottom: -1150px;
 }
 
+#tv-container {
+  position: absolute;
+  right: 50px;
+  bottom: -785px;
+}
+
 #flicker-container {
   position: absolute;
   width: 100%;
