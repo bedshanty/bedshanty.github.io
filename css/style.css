@@ -28,10 +28,90 @@ html {
   bottom: -785px;
 }
 
+#tv-container img {
+  pointer-events: none;
+}
+
+#tv-container iframe {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  z-index: -4;
+}
+
+.crt-effect {
+  position: absolute;
+  width: 160px;
+  height: 120px;
+  left: 20px;
+  top: 30px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -3;
+}
+
+.crt-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 16, 16, 0) 30%,
+    rgba(0, 0, 0, 0.25) 30%
+  );
+  background-size: 100% 8px;
+  z-index: -2;
+
+  animation: scanline 8s infinite linear;
+}
+
+.crt-effect::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: url('/img/noise.svg');
+  animation: noise 0.2s infinite linear;
+  z-index: -1;
+}
+
+@keyframes noise {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -5%); }
+  20% { transform: translate(-10%, 5%); }
+  30% { transform: translate(5%, -10%); }
+  40% { transform: translate(-5%, 15%); }
+  50% { transform: translate(-10%, 5%); }
+  60% { transform: translate(15%, 0); }
+  70% { transform: translate(0, 10%); }
+  80% { transform: translate(-15%, 0); }
+  90% { transform: translate(10%, 5%); }
+  100% { transform: translate(5%, 0); }
+}
+
+@keyframes scanline {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -100px;
+  }
+}
+
+.shake {
+  transition: transform 0.066s ease-in-out;
+}
+
 #flicker-container {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: black;
   opacity: 0;
+  pointer-events: none;
 }
