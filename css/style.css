@@ -74,6 +74,20 @@ html {
   inset: 0;
 }
 
+#desk-goods-check {
+  position: absolute;
+  width: 150px;
+  height: 120px;
+  left: 300px;
+  top: -60px;
+  transform-origin: center bottom;
+  cursor: pointer;
+}
+
+#desk-goods-check:hover {
+  transform: scale(1.1);
+}
+
 #desk-goods-machugi {
   position: absolute;
   width: 175px;
@@ -86,8 +100,6 @@ html {
 
 #desk-goods-machugi:hover {
   transform: scale(1.1);
-  filter: none;
-  cursor: pointer;
 }
 
 #tv-container {
