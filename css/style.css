@@ -10,6 +10,12 @@ html {
   position: absolute;
 }
 
+#bg-container img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
 #shelf-back-container {
   position: absolute;
   right: -10px;
@@ -20,7 +26,7 @@ html {
   position: absolute;
   left: 50%;
   bottom: -770px;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
 }
 
 #bartender-container img {
@@ -30,8 +36,23 @@ html {
 
 #desk-front-container {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: -1150px;
+}
+
+#desk-goods-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+#desk-goods-machugi {
+  position: absolute;
+  width: 175px;
+  height: 219px;
+  left: 500px;
+  top: -155px;
 }
 
 #tv-container {
@@ -103,17 +124,39 @@ html {
 }
 
 @keyframes noise {
-  0% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -5%); }
-  20% { transform: translate(-10%, 5%); }
-  30% { transform: translate(5%, -10%); }
-  40% { transform: translate(-5%, 15%); }
-  50% { transform: translate(-10%, 5%); }
-  60% { transform: translate(15%, 0); }
-  70% { transform: translate(0, 10%); }
-  80% { transform: translate(-15%, 0); }
-  90% { transform: translate(10%, 5%); }
-  100% { transform: translate(5%, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
 }
 
 @keyframes scanline {
