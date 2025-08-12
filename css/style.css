@@ -31,19 +31,40 @@ html {
 #bartender-container {
   position: absolute;
   left: 50%;
-  bottom: -770px;
+  transform: translateX(-50%);
+  bottom: -780px;
+  z-index: 111;
+}
+
+.bartender {
+  position: absolute;
+  left: 50%;
   transform: translateX(-50%);
 }
 
-#bartender-container img {
+#bartender-idle {
   width: 720px;
   height: 405px;
+  bottom: -780px;
+}
+
+#bartender-sleep {
+  width: 450px;
+  height: 270px;
+  bottom: -810px;
+  z-index: 1;
 }
 
 #desk-front-container {
   position: absolute;
   right: 0;
   bottom: -1150px;
+  z-index: 0;
+}
+
+#desk-back-container {
+  position: relative;
+  z-index: 0;
 }
 
 #desk-goods-container {
