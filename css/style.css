@@ -53,6 +53,14 @@ html {
   height: 219px;
   left: 500px;
   top: -155px;
+  transform-origin: center bottom;
+  cursor: pointer;
+}
+
+#desk-goods-machugi:hover {
+  transform: scale(1.1);
+  filter: none;
+  cursor: pointer;
 }
 
 #tv-container {
