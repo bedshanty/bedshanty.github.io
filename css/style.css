@@ -11,15 +11,21 @@ html {
 }
 
 #bg-container img {
-  width: 100vw;
-  height: 100vh;
+  width: 101vw;
+  height: 101vh;
   object-fit: cover;
 }
 
 #shelf-back-container {
   position: absolute;
-  right: -10px;
+  right: -5px;
   bottom: -980px;
+}
+
+#shelf-right-container {
+  position: absolute;
+  right: -5px;
+  bottom: -750px;
 }
 
 #bartender-container {
@@ -126,7 +132,7 @@ html {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: url('/img/noise.svg');
+  background: url("/img/noise.svg");
   animation: noise 0.2s infinite linear;
   z-index: -1;
 }
