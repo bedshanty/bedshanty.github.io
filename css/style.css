@@ -106,6 +106,7 @@ html {
   position: absolute;
   right: 50px;
   bottom: -785px;
+  z-index: 2;
 }
 
 #tv-container img {
