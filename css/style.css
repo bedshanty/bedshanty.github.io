@@ -216,6 +216,25 @@ html {
   }
 }
 
+#ui-check-container {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  bottom: -805px;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease;
+}
+
+#ui-check-container.active {
+  bottom: -5px;
+}
+
+#ui-check-container img {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+}
+
 .shake {
   transition: transform 0.066s ease-in-out;
 }
