@@ -115,10 +115,10 @@ span {
 
 #desk-goods-stickman {
   position: absolute;
-  width: 235px;
-  height: 190px;
-  right: 425px;
-  top: -105px;
+  width: 222px;
+  height: 180px;
+  right: 475px;
+  top: -95px;
   transform-origin: center bottom;
   cursor: pointer;
 }
