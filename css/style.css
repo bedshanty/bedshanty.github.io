@@ -102,6 +102,20 @@ html {
   transform: scale(1.1);
 }
 
+#desk-goods-stickman {
+  position: absolute;
+  width: 235px;
+  height: 190px;
+  right: 425px;
+  top: -105px;
+  transform-origin: center bottom;
+  cursor: pointer;
+}
+
+#desk-goods-stickman:hover {
+  transform: scale(1.1);
+}
+
 #tv-container {
   position: absolute;
   right: 50px;
