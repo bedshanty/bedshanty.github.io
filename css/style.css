@@ -1,5 +1,16 @@
+@font-face {
+  font-family: "Coupon";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/font/Coupon-Regular.woff2");
+}
+
 html {
   overflow: hidden;
+}
+
+span {
+  font-family: Coupon, sans-serif;
 }
 
 #canvas {
@@ -243,14 +254,89 @@ html {
   bottom: -5px;
 }
 
-#ui-check-container img {
+#ui-check-container > img {
   position: relative;
   width: 1200px;
   height: 800px;
 }
 
+#ui-check-content-container {
+  position: absolute;
+  top: 50px;
+  left: 335px;
+  width: 400px;
+  height: 630px;
+  transform: rotate(-4.5deg);
+  /*background-color: rgba(255, 0, 0, 0.5);*/
+}
+
+#ui-check-content-date {
+  position: absolute;
+  top: 209px;
+  left: 240px;
+  font-size: 20px;
+  color: #211906;
+  filter: blur(0.5px);
+}
+
+.ui-check-content-item-list {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-check-content-item {
+  position: relative;
+  width: 300px;
+  height: 65px;
+  margin-bottom: 10px;
+}
+
+.ui-check-content-item-icon {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  opacity: 0.8;
+  filter: blur(0.5px);
+}
+
+.ui-check-content-item-text {
+  position: absolute;
+  top: 12px;
+  left: 90px;
+  width: 200px;
+  height: 40px;
+  font-size: 40px;
+  text-align: left;
+  vertical-align: middle;
+  color: #211906;
+  filter: blur(0.5px);
+}
+
+#ui-check-content-total {
+  position: absolute;
+  bottom: 35px;
+  right: 45px;
+  font-size: 44px;
+  font-weight: bolder;
+  color: #211906;
+  filter: blur(0.5px);
+
+}
+
 .shake {
   transition: transform 0.066s ease-in-out;
+}
+
+.hidden {
+  display: none;
 }
 
 #flicker-container {
