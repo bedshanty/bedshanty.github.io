@@ -21,10 +21,30 @@ span {
   position: absolute;
 }
 
-#bg-container img {
+#bg-container > img {
   width: 101vw;
   height: 101vh;
   object-fit: cover;
+}
+
+#frame-container {
+  position: absolute;
+  top: 75px;
+  left: 400px;
+}
+
+#frame {
+  width: 267px;
+  height: 269px;
+}
+
+#frame-art {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 130px;
+  transform: translate(-50%, -50%);
+  filter: grayscale(100%);
 }
 
 #shelf-back-container {
@@ -39,18 +59,23 @@ span {
   bottom: -750px;
 }
 
-#bartender-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -780px;
-  z-index: 111;
-}
-
 .bartender {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
+}
+
+#bartender-container.sleep .bartender.sleep {
+  display: block;
+}
+
+#bartender-container.machugi .bartender.machugi {
+  display: block;
+}
+
+#bartender-container.stickman .bartender.stickman {
+  display: block;
 }
 
 #bartender-idle {

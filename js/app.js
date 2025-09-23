@@ -1,6 +1,10 @@
 // endpoints
 const endpoint = "https://bartender-api-674630912636.asia-northeast3.run.app";
+const getNowUrl = endpoint + "/now";
 const getLatestRecordUrl = endpoint + "/record/latest"
+
+// elements - background
+const frameArtElement = document.getElementById("frame-art");
 
 // elements - effect
 const shakeElements = document.getElementsByClassName("shake");
@@ -17,6 +21,9 @@ const recordItemElementContents = [...recordItemElements].map(item => ({
   text: item.getElementsByClassName("ui-check-content-item-text")[0],
 }));
 const recordTotalTextElement = document.getElementById("ui-check-content-total");
+
+// elements - bartender
+const bartenderContainerElement = document.getElementById("bartender-container");
 
 // animation values
 let lastTime = 0;
@@ -126,4 +133,20 @@ const animate = (currentTime) => {
   requestAnimationFrame(animate);
 };
 
-requestAnimationFrame(animate);
+const initialize = async () => {
+  requestAnimationFrame(animate);
+  const response = await fetch(getNowUrl);
+
+  if (!response.ok) {
+    return;
+  }
+
+  const data = await response.json();
+  console.log(data);
+
+  frameArtElement.classList.remove("hidden");
+  frameArtElement.src = getImageUrl(data.featuredItemId);
+  bartenderContainerElement.className = data.itemId || "sleep";
+};
+
+initialize();
