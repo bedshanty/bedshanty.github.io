@@ -21,6 +21,10 @@
   </div>
   <div class="shake" id="shelf-right-container">
     <img src="img/shelf_right.png" alt="shelf-right"/>
+    <img class="bottle" id="bottle-default" src="img/bottle_default.png" alt="bottle-default"
+         onclick="onDefaultBottomClick()"/>
+    <img class="bottle" id="bottle-newspaper" src="img/bottle_newspaper.png" alt="bottle-newspaper"
+         onclick="onNewspaperBottomClick()"/>
   </div>
   <div class="hidden" id="bartender-container" ondragstart="onBartenderDragStart()">
     <img class="bartender machugi stickman" id="bartender-idle" src="img/bartender_idle.gif" alt="bartender-idle"/>
@@ -67,6 +71,8 @@
   </div>
 </div>
 <div id="flicker-container"></div>
+<div class="overlay" id="overlay-default"></div>
+<div class="overlay" id="overlay-newspaper"></div>
 <script src="js/app.js"></script>
 </body>
 </html>

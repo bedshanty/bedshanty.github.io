@@ -59,6 +59,26 @@ span {
   bottom: -750px;
 }
 
+.bottle {
+  position: absolute;
+  transform-origin: center bottom;
+  cursor: pointer;
+}
+
+.bottle:hover {
+  transform: scale(1.1);
+}
+
+#bottle-default {
+  top: 100px;
+  right: 175px;
+}
+
+#bottle-newspaper {
+  top: 75px;
+  right: 75px;
+}
+
 .bartender {
   position: absolute;
   left: 50%;
@@ -91,11 +111,16 @@ span {
   z-index: 1;
 }
 
+#desk-front {
+  position: absolute;
+  right: 0;
+  bottom: -1150px;
+}
+
 #desk-front-container {
   position: absolute;
   right: 0;
   bottom: -1150px;
-  z-index: 0;
 }
 
 #desk-back-container {
@@ -377,4 +402,28 @@ span {
   background-color: black;
   opacity: 0;
   pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  border-radius: 50%;
+  transition: width 2s ease-in, height 2s ease-in;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  transform: translate(50%, -50%);
+  filter: blur(10vw);
+}
+
+.overlay-active {
+  width: 250vw;
+  height: 250vw;
+}
+
+#overlay-newspaper {
+  top: 325px;
+  right: 115px;
+  background-color: rgba(148, 133, 103, 0.33);
 }
