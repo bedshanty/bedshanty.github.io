@@ -2,6 +2,7 @@
 const endpoint = "https://bartender-api-674630912636.asia-northeast3.run.app";
 const getNowUrl = endpoint + "/now";
 const getLatestRecordUrl = endpoint + "/record/latest"
+const postTaskUrl = endpoint + "/task"
 
 // elements - background
 const frameArtElement = document.getElementById("frame-art");
@@ -33,10 +34,14 @@ const backgroundShakeIntensity = 1;
 const tvFlickerIntensity = 0.2;
 
 // task item constants
-const machugiKey = "machugi"
+const machugiId = "machugi"
 const machugiImageUrl = "/img/icon_machugi.png"
-const stickmanKey = "stickman"
+const stickmanId = "stickman"
 const stickmanImageUrl = "/img/icon_stickman.png"
+
+// api key
+const apiKeyQueryParameter = "key";
+const apiKey = new URLSearchParams(window.location.search).get(apiKeyQueryParameter);
 
 const onCheckClick = async () => {
   const onOutsideClick = (e) => {
@@ -100,15 +105,52 @@ const onCheckClick = async () => {
   recordTotalTextElement.innerText = convertTimeToCost(totalTime);
 };
 
+const onMachugiDragStart = async () => {
+  return requestPostTask(machugiId);
+}
+
+const onStickmanDragStart = async () => {
+
+  return requestPostTask(stickmanId);
+}
+
+const onBartenderDragStart = async () => {
+  return requestPostTask(null);
+}
+
+const requestPostTask = async (itemId) => {
+  if (apiKey == null) {
+    return;
+  }
+
+  const response = await fetch(postTaskUrl, {
+    method: "POST",
+    headers: {
+      "Authorization": apiKey,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      itemId: itemId,
+    }),
+  });
+
+  if (response.ok) {
+    window.alert(`Task ${itemId} posted!`);
+  } else {
+    window.alert(`Task failed!`);
+    console.log(response.status, response.statusText);
+  }
+}
+
 const convertTimeToCost = (time) => {
   return `€ ${Math.floor(time / 3600)},${Math.floor(time % 3600 / 60).toString().padStart(2, "0")}`
 }
 
 const getImageUrl = (key) => {
   switch (key) {
-    case machugiKey:
+    case machugiId:
       return machugiImageUrl;
-    case stickmanKey:
+    case stickmanId:
       return stickmanImageUrl;
     default:
       return undefined;
@@ -142,7 +184,6 @@ const initialize = async () => {
   }
 
   const data = await response.json();
-  console.log(data);
 
   frameArtElement.classList.remove("hidden");
   frameArtElement.src = getImageUrl(data.featuredItemId);

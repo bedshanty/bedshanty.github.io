@@ -22,7 +22,7 @@
   <div class="shake" id="shelf-right-container">
     <img src="img/shelf_right.png" alt="shelf-right"/>
   </div>
-  <div class="hidden" id="bartender-container">
+  <div class="hidden" id="bartender-container" ondragstart="onBartenderDragStart()">
     <img class="bartender machugi stickman" id="bartender-idle" src="img/bartender_idle.gif" alt="bartender-idle"/>
     <img class="bartender sleep" id="bartender-sleep" src="img/bartender_sleep.gif" alt="bartender-sleep"/>
   </div>
@@ -31,10 +31,10 @@
     <div id="desk-goods-container">
       <img id="desk-goods-check" src="img/check.png" alt="check" onclick="onCheckClick()"/>
       <a href="https://machugi.io" target="_blank">
-        <img id="desk-goods-machugi" src="img/machugi.gif" alt="machugi"/>
+        <img id="desk-goods-machugi" src="img/machugi.gif" alt="machugi" ondragstart="onMachugiDragStart()"/>
       </a>
       <a href="https://play.google.com/store/apps/details?id=io.fallingstones.stickmancraft&hl=ko" target="_blank">
-        <img id="desk-goods-stickman" src="img/stickman.gif" alt="stickman"/>
+        <img id="desk-goods-stickman" src="img/stickman.gif" alt="stickman" ondragstart="onStickmanDragStart()"/>
       </a>
     </div>
   </div>
