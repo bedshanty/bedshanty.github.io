@@ -1,0 +1,44 @@
+Privacy Policy
+Effective Date: 2025-02-20
+
+This Privacy Policy ("Policy") explains how we collect, use, and protect the information provided or collected through our website and applications. We are committed to protecting your personal information and ensuring transparency in how we handle your data.
+
+1. Information We Collect
+We collect the following types of information:
+Personal Information Provided by Users
+Examples: email address, ID, and other information you provide directly.
+Information Collected While Using Services
+Device Information: Device identifier, operating system, hardware version, device settings, and phone number.
+Log Information: Log data, usage time, search terms, IP address, cookies.
+Location Information: Geographical location detected through GPS, Bluetooth, or Wi-Fi (where permitted by law).
+
+2. Use of Collected Information
+We use the collected information for the following purposes:
+Service Quality Improvement
+Events and promotions.
+
+3. Sharing Collected Information
+We do not share your personal information with third parties except in the following cases:
+With Affiliates and Partners: When necessary for services such as payment processing, order fulfillment, and dispute resolution.
+Legal Requirements: When required by law or investigative agencies.
+
+4. User Rights
+You have the following rights regarding your personal information:
+Access: Request access to your personal information.
+Correction or Deletion: Request corrections or deletion of your information.
+Withdrawal of Consent: Withdraw consent for the use of your information.
+To exercise these rights, please contact us using the information provided below.
+
+5. Security
+We take the following security measures to protect your personal information:
+Encryption: We encrypt sensitive information during transmission and storage.
+Access Control: We limit access to personal information to authorized personnel only.
+Internal Policies: We have established internal management plans to ensure data security.
+
+6. Changes to This Policy
+We may update this Policy from time to time. Any changes will be posted on our website, and we will notify you if required by law.
+
+7. Contact Us
+If you have any questions or concerns about this Privacy Policy, please contact us at:
+Department Responsible for Privacy Protection:
+Email: nakseokjuui@gmail.com
